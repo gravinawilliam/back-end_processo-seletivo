@@ -39,7 +39,8 @@ export default class CreateUserService {
       throw new AppError('CPF já existe');
     }
 
-    if (age < 0) {
+    const ageIsNegative = age < 0;
+    if (ageIsNegative) {
       throw new AppError('Idade negativa');
     }
 
