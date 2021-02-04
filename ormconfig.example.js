@@ -7,10 +7,10 @@ module.exports = {
     "./src/modules/**/infra/typeorm/entities/*.ts"
   ],
   "migrations": [
-    "./src/core/infra/typeorm/migrations/*.ts"
+    "./src/shared/infra/typeorm/migrations/*.ts"
   ],
   "cli": {
     "entitiesDir": "./src/modules/**/infra/typeorm/entities",
-    "migrationsDir": "./src/core/infra/typeorm/migrations"
+    "migrationsDir": "./src/shared/infra/typeorm/migrations"
   }
 }
