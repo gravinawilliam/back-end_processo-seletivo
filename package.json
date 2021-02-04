@@ -1,0 +1,8 @@
+{
+  "name": "back-end_processo-seletivo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gravinawilliam/back-end_processo-seletivo.git",
+  "author": "gravinawilliam <williamgravina.programador@gmail.com>",
+  "license": "MIT"
+}
