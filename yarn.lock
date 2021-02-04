@@ -1811,6 +1811,11 @@ dynamic-dedupe@^0.3.0:
   dependencies:
     xtend "^4.0.0"
 
+easy-location-br@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/easy-location-br/-/easy-location-br-1.0.9.tgz#5c29c1f851f793c834b1ea7ff22469a5b8fc7a49"
+  integrity sha512-dqBIt6hiTlFTb5ETcyb4Plo/P2cJfDDUy2Jr8xuHbfEjzoJzdiEHgdMCBljXwbJM0p9Wxq+blUgdUmsoct2/7g==
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -2083,6 +2088,11 @@ esrecurse@^4.3.0:
   integrity sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==
   dependencies:
     estraverse "^5.2.0"
+
+estados-cidades@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/estados-cidades/-/estados-cidades-4.1.0.tgz#b825da6ae367c527b7c9e8a0d5fb36f32d9b9d8a"
+  integrity sha512-jj+UiHS8Rxz4kethGS4JIH4b/wFEYx5gIMIxZFogU6zLNpldnxzONT+//raHabADbc1ANl0PPRZUEoG9t1nI0w==
 
 estraverse@^4.1.1, estraverse@^4.2.0:
   version "4.3.0"
@@ -3468,7 +3478,7 @@ jest@^26.6.3:
     import-local "^3.0.2"
     jest-cli "^26.6.3"
 
-joi@17.x.x, joi@^17.3.0:
+joi@17.x.x:
   version "17.3.0"
   resolved "https://registry.yarnpkg.com/joi/-/joi-17.3.0.tgz#f1be4a6ce29bc1716665819ac361dfa139fff5d2"
   integrity sha512-Qh5gdU6niuYbUIUV5ejbsMiiFmBdw8Kcp8Buj2JntszCkCfxJ9Cz76OtHxOZMPXrt5810iDIXs+n1nNVoquHgg==
