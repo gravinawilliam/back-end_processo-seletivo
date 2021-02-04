@@ -83,4 +83,16 @@ describe('CreateUser', () => {
       })
     ).rejects.toBeInstanceOf(AppError);
   });
+  it('should not be able to create a new user with an invalid Brazilian city', async () => {
+    await expect(
+      createUser.execute({
+        name: 'william',
+        age: 1,
+        city: 'cidadeErrada',
+        cpfUser: '166.993.130-70',
+        marital_status: 'Solteiro',
+        state: 'MG',
+      })
+    ).rejects.toBeInstanceOf(AppError);
+  });
 });
