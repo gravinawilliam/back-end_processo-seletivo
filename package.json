@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/gravinawilliam/back-end_processo-seletivo.git",
   "author": "gravinawilliam <williamgravina.programador@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.0"
+  }
 }
