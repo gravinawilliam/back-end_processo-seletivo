@@ -15,7 +15,7 @@ describe('CreateUser', () => {
     const user1 = await fakeUsersRepository.create({
       name: 'william',
       age: 10,
-      city: 'uba',
+      city: 'Ubá',
       cpf: '166.993.130-70',
       marital_status: 'Solteiro',
       state: 'MG',
@@ -23,7 +23,7 @@ describe('CreateUser', () => {
     const user2 = await fakeUsersRepository.create({
       name: 'william',
       age: 10,
-      city: 'uba',
+      city: 'Ubá',
       cpf: '166.993.130-70',
       marital_status: 'Solteiro',
       state: 'MG',
@@ -31,7 +31,7 @@ describe('CreateUser', () => {
     const user3 = await fakeUsersRepository.create({
       name: 'william',
       age: 10,
-      city: 'uba',
+      city: 'Ubá',
       cpf: '166.993.130-70',
       marital_status: 'Solteiro',
       state: 'MG',
