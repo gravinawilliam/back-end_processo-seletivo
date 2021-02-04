@@ -1,0 +1,4 @@
+node_modules
+coverage
+ormconfig.js
+.env
