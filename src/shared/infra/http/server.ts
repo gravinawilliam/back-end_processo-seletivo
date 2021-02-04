@@ -31,6 +31,6 @@ app.use((error: Error, req: Request, res: Response, _: NextFunction) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(2222, () => {
   console.log('✅ OK');
 });
