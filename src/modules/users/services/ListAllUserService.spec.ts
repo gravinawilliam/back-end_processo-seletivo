@@ -11,7 +11,7 @@ describe('CreateUser', () => {
     listAllUserService = new ListAllUserService(fakeUsersRepository);
   });
 
-  it('should be able to create a new user', async () => {
+  it('must be able to list all users', async () => {
     const user1 = await fakeUsersRepository.create({
       name: 'william',
       age: 10,

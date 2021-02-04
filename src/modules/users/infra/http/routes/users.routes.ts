@@ -22,4 +22,6 @@ usersRouter.post(
 
 usersRouter.get('/', usersController.index);
 
+usersRouter.patch('/', usersController.update);
+
 export default usersRouter;
