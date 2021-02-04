@@ -16,7 +16,7 @@ describe('CreateUser', () => {
     const user = await createUser.execute({
       name: 'william',
       age: 10,
-      city: 'uba',
+      city: 'Ubá',
       cpfUser: '166.993.130-70',
       marital_status: 'Solteiro',
       state: 'MG',
@@ -28,7 +28,7 @@ describe('CreateUser', () => {
     await createUser.execute({
       name: 'william',
       age: 10,
-      city: 'uba',
+      city: 'Ubá',
       cpfUser: '166.993.130-70',
       marital_status: 'Solteiro',
       state: 'MG',
@@ -37,7 +37,7 @@ describe('CreateUser', () => {
       createUser.execute({
         name: 'william',
         age: -1,
-        city: 'uba',
+        city: 'Ubá',
         cpfUser: '166.993.130-70',
         marital_status: 'Solteiro',
         state: 'MG',
@@ -50,7 +50,7 @@ describe('CreateUser', () => {
       createUser.execute({
         name: 'william',
         age: -1,
-        city: 'uba',
+        city: 'Ubá',
         cpfUser: '166.993.130-70',
         marital_status: 'Solteiro',
         state: 'MG',
@@ -63,7 +63,7 @@ describe('CreateUser', () => {
       createUser.execute({
         name: 'william',
         age: 10,
-        city: 'uba',
+        city: 'Ubá',
         cpfUser: '16699313070',
         marital_status: 'Solteiro',
         state: 'MG',
@@ -76,7 +76,7 @@ describe('CreateUser', () => {
       createUser.execute({
         name: 'william',
         age: 1,
-        city: 'uba',
+        city: 'Ubá',
         cpfUser: '166.993.130-70',
         marital_status: 'Solteiro',
         state: 'estadoErrado',

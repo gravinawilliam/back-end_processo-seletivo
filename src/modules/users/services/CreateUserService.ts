@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 import { cpf } from 'cpf-cnpj-validator';
-import { states } from 'estados-cidades';
+import { states, cities } from 'estados-cidades';
 import User from '../infra/typeorm/entities/User';
 import AppError from '../../../shared/errors/AppError';
 import IUsersRepository from '../interfaces/IUsersRepository';
@@ -52,6 +52,17 @@ export default class CreateUserService {
     });
     if (!stateExist) {
       throw new AppError('Esse estado não existe');
+    }
+
+    const citiesBr = cities(state);
+    let cityExist = false;
+    citiesBr.forEach(cityBr => {
+      if (cityBr === city) {
+        cityExist = true;
+      }
+    });
+    if (!cityExist) {
+      throw new AppError('Essa cidade não existe');
     }
 
     const user = await this.usersRepository.create({
