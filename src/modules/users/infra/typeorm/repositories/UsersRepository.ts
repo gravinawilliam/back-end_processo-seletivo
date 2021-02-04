@@ -10,7 +10,12 @@ export default class UsersRepository implements IUserRepository {
     this.ormRepository = getRepository(User);
   }
 
-  async findByCpf(cpf: string): Promise<User | undefined> {
+  public async findAllUsers(): Promise<User[]> {
+    const users = await this.ormRepository.find();
+    return users;
+  }
+
+  public async findByCpf(cpf: string): Promise<User | undefined> {
     const user = await this.ormRepository.findOne({ where: { cpf } });
     return user;
   }

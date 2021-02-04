@@ -6,6 +6,12 @@ import IUserRepository from '../../../../interfaces/IUsersRepository';
 export default class FakeUsersRepository implements IUserRepository {
   private users: User[] = [];
 
+  public async findAllUsers(): Promise<User[]> {
+    let { users } = this;
+    users = this.users;
+    return users;
+  }
+
   public async findById(id: string): Promise<User | undefined> {
     const findUser = this.users.find(user => user.id === id);
     return findUser;

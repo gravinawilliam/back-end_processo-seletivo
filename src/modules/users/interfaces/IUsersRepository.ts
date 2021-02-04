@@ -6,4 +6,5 @@ export default interface IUsersRepository {
   findByCpf(cpf: string): Promise<User | undefined>;
   create(data: ICreateUserDTO): Promise<User>;
   save(user: User): Promise<User>;
+  findAllUsers(): Promise<User[]>;
 }
