@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import dotenv from 'dotenv';
+import { errors } from 'celebrate';
 import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
 import AppError from '../../errors/AppError';
@@ -13,6 +14,8 @@ const app = express();
 
 app.use(express.json());
 app.use(routes);
+
+app.use(errors());
 
 app.use((error: Error, req: Request, res: Response, _: NextFunction) => {
   if (error instanceof AppError) {
