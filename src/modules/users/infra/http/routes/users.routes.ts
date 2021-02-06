@@ -23,5 +23,6 @@ usersRouter.post(
 usersRouter.get('/', usersController.index);
 
 usersRouter.patch('/', usersController.update);
+usersRouter.delete('/', usersController.delete);
 
 export default usersRouter;

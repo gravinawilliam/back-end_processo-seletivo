@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
-import CreateUserService from 'src/modules/users/services/CreateUserService';
-import ListAllUserService from 'src/modules/users/services/ListAllUserService';
-import UpdateUserService from 'src/modules/users/services/UpdateUserService';
 import { container } from 'tsyringe';
+import CreateUserService from '../../../services/CreateUserService';
+import ListAllUserService from '../../../services/ListAllUserService';
+import UpdateUserService from '../../../services/UpdateUserService';
+import DeleteUserService from '../../../services/DeleteUserService';
 
 export default class UsersController {
   public async create(req: Request, res: Response): Promise<Response> {
@@ -25,10 +26,19 @@ export default class UsersController {
     return res.json(user);
   }
 
+  public async delete(req: Request, res: Response): Promise<Response> {
+    const { user_id } = req.body;
+    const deleteUser = container.resolve(DeleteUserService);
+    const user = await deleteUser.execute({
+      user_id,
+    });
+    return res.json(user);
+  }
+
   public async update(req: Request, res: Response): Promise<Response> {
     const { user_id, name, age, marital_status, cpf, city, state } = req.body;
-    const updateProfile = container.resolve(UpdateUserService);
-    const user = await updateProfile.execute({
+    const updateUser = container.resolve(UpdateUserService);
+    const user = await updateUser.execute({
       user_id,
       name,
       age,

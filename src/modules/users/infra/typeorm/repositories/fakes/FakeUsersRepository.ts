@@ -1,4 +1,5 @@
 import { uuid } from 'uuidv4';
+import AppError from '../../../../../../shared/errors/AppError';
 import ICreateUserDTO from '../../../../dtos/ICreateUserDTO';
 import User from '../../entities/User';
 import IUserRepository from '../../../../interfaces/IUsersRepository';
@@ -10,6 +11,17 @@ export default class FakeUsersRepository implements IUserRepository {
     let { users } = this;
     users = this.users;
     return users;
+  }
+
+  // TODO: Tenho que arrumar esse delete
+  public async delete(user: User): Promise<User> {
+    const pegaUser = this.users.find(usuario => usuario.id === user.id);
+    if (!pegaUser) {
+      throw new AppError('Usuário não existe');
+    }
+    const findIndex = this.users.findIndex(findUser => findUser.id === user.id);
+    this.users.splice(findIndex, 1);
+    return pegaUser;
   }
 
   public async findById(id: string): Promise<User | undefined> {
