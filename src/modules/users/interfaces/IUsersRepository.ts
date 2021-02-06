@@ -1,0 +1,11 @@
+import User from '../infra/typeorm/entities/User';
+import ICreateUserDTO from '../dtos/ICreateUserDTO';
+
+export default interface IUsersRepository {
+  findById(id: string): Promise<User | undefined>;
+  findByCpf(cpf: string): Promise<User | undefined>;
+  create(data: ICreateUserDTO): Promise<User>;
+  save(user: User): Promise<User>;
+  delete(user: User): Promise<User>;
+  findAllUsers(): Promise<User[]>;
+}
