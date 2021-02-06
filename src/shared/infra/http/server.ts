@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { errors } from 'celebrate';
 import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
+import cors from 'cors';
 import AppError from '../../errors/AppError';
 import routes from './routes';
 import '../typeorm';
@@ -12,9 +13,13 @@ dotenv.config();
 
 const app = express();
 
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+  })
+);
 app.use(express.json());
 app.use(routes);
-
 app.use(errors());
 
 app.use((error: Error, req: Request, res: Response, _: NextFunction) => {
@@ -24,7 +29,6 @@ app.use((error: Error, req: Request, res: Response, _: NextFunction) => {
       message: error.message,
     });
   }
-  console.log(error);
   return res.status(500).json({
     status: 'error',
     message: 'Internal server error',
