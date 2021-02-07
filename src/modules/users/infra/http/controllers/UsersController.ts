@@ -27,10 +27,10 @@ export default class UsersController {
   }
 
   public async delete(req: Request, res: Response): Promise<Response> {
-    const { user_id } = req.body;
+    const { userId } = req.body;
     const deleteUser = container.resolve(DeleteUserService);
     const user = await deleteUser.execute({
-      user_id,
+      user_id: userId,
     });
     return res.json(user);
   }
